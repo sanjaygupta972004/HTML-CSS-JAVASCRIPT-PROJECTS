@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color_Switcher</title>
+    <!--style file start-->
+    <style>
+        .navbar{
+            width: 100%;
+            height: 40px;
+            background-color: rgb(143, 131, 131);
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 5px;
+        }
+        .btn{
+            background-color: rgb(9, 185, 255);
+            color: rgb(72, 67, 67);
+            font-size: x-large;
+            border-radius: 5px;
+            border: none;
+            transition: all 1s linear 0.5s ;
+        }
+        .btn:hover{
+            cursor: pointer;
+            border: 4px solid black;
+            background-color: #fff;
+        }
+        .main_section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+        }
+        h2{
+            text-transform: capitalize;
+            text-align: center;
+            margin-top: 30px;
+            font-weight: 500;
+            font-size: 25px;
+            border-bottom: solid rgb(200, 87, 87);
+        }
+        .convas{
+            width: 500px;
+            height: 150px;
+            position: relative;
+            border: 2px solid blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .box{
+            width: 80px;
+            height: 80px;
+            background-color: aquamarine;
+            border: 2px solid black;
+        }
+        p{
+            text-align-last: center;
+            font-size: large;
+            text-transform: capitalize;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: justify;
+            width: 50%;
+        }
+    </style>
+    <!---style file end-->
+</head>
+<body>
+    <nav class="navbar">
+        <button class="btn">Home</button>
+        <button class="btn">Youtube Channel</button>
+    </nav>
+    <div class="main_section">
+    <h2>color switcher</h2>
+    <div class="convas">
+      <div style="background-color: red;" class="box" id="red"></div>
+        <div style="background-color: green;" class="box" id="green"></div>
+          <div style="background-color: blue;" class="box" id="blue"></div>
+            <div style="background-color: skyblue;" class="box" id="sky"></div>
+              <div style="background-color: gray;" class="box" id="gray"></div>
+    </div>
+    <p>In a world where colors reign supreme, the Color Switcher emerged as a captivating phenomenon. With its magical ability to transform the very essence of its surroundings, it became a source of awe and wonder for all who encountered it. Picture a spherical device, pulsating with vibrant energy, capable of shifting the hues of objects with a mere touch.</p>
+    </div>
+
+    <!--script file start-->
+    <script>
+        const colors=document.querySelectorAll(".box");
+        const body=document.querySelector("body");
+
+        colors.forEach((e) => {
+           e.addEventListener('click',(e)=>{
+            if(e.target.id=== 'gray'){
+                body.style.backgroundColor="gray"
+            };
+            if(e.target.id=== 'sky'){
+                body.style.backgroundColor="skyblue"
+            };
+            if(e.target.id=== 'blue'){
+                body.style.backgroundColor="blue"
+            };
+            if(e.target.id=== 'green'){
+                body.style.backgroundColor="green"
+            };
+            if(e.target.id=== 'red'){
+                body.style.backgroundColor="red"
+            };
+        })    
+        });
+    </script>
+    <!--script file end-->
+</body>
+</html>
